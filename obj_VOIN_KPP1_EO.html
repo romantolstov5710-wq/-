@@ -92,6 +92,7 @@ select{background:#1e293b;color:#e2e8f0;border:1px solid #334155;
 @media(max-width:900px){
   #mob{display:flex}
   #left{display:none}
+  #bar{display:none}
   body{padding-bottom:70px}
   #st{display:none}
 }
@@ -342,24 +343,24 @@ select{background:#1e293b;color:#e2e8f0;border:1px solid #334155;
 
     <!-- Вариант 1: Скачать HTML → отправить файлом -->
     <div style="background:#0a1628;border:1px solid #1d4ed8;border-radius:7px;padding:10px;margin-bottom:8px">
-      <div style="font-size:11px;font-weight:700;color:#60a5fa;margin-bottom:6px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+      <div style="font-size:11px;font-weight:700;color:#60a5fa;margin-bottom:6px">
         📥 Способ 1 — скачать и отправить файлом (надёжно)
-      </font></font></div>
-      <div style="font-size:10.5px;color:#94a3b8;line-height:1.7;margin-bottom:7px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
-        1. Нажми «Скачать ведомость» ↓ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
-        2. Прикрепить файл </font></font><b style="color:#e2e8f0"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">.html</font></font></b><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> в чат YouGile/Telegram </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
-        3. Проект открыть проводник файла в браузере — всё работает
-      </font></font></div>
-      <button class="btn" onclick="shareDownloadVed()" style="width:100%;padding:10px;background:#1d4ed8;color:#fff;font-size:12px;font-weight:700"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+      </div>
+      <div style="font-size:10.5px;color:#94a3b8;line-height:1.7;margin-bottom:7px">
+        1. Нажми «Скачать ведомость» ↓<br>
+        2. Прикрепи файл <b style="color:#e2e8f0">.html</b> в чат YouGile / Telegram<br>
+        3. Проектировщик откроет файл в браузере — всё работает
+      </div>
+      <button class="btn" onclick="shareDownloadVed()" style="width:100%;padding:10px;background:#1d4ed8;color:#fff;font-size:12px;font-weight:700">
         📥 Скачать ведомость HTML
-      </font></font></button>
+      </button>
     </div>
 
     <!-- Вариант 2: Опубликовать через интернет -->
     <div style="background:#0d1117;border:1px solid #334155;border-radius:7px;padding:10px;margin-bottom:8px">
-      <div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:6px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+      <div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:6px">
         🌐 Способ 2 — опубликовать и получить ссылку
-      </font></font></div>
+      </div>
       <div style="font-size:10.5px;color:#64748b;line-height:1.7;margin-bottom:7px">
         Загружает СНИМОК текущей ведомости на отдельную страницу (не сам инструмент) и даёт ссылку.<br>
         Это другая ссылка, чем «рабочий шаблон объекта» из окна 🏗️ Объект — эта нужна специально
@@ -946,18 +947,25 @@ select{background:#1e293b;color:#e2e8f0;border:1px solid #334155;
 
   <label style="font-size:10px;color:#64748b;display:block;margin-bottom:3px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">били</font></font></label>
   <select id="mobj-project" onchange="_mobjUpdateKorpus()" style="width:100%;background:#0d1117;color:#e2e8f0;border:1px solid #334155;border-radius:6px;
-    padding:9px 10px;font-size:13px;margin-bottom:10px;outline:none">
+    padding:9px 10px;font-size:13px;margin-bottom:6px;outline:none">
     <option value=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">— выбор проекта —</font></font></option>
     <option value="ИСКРА"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ИСКРА</font></font></option>
     <option value="ВОИН"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ВОИН</font></font></option>
     <option value="ФСИН2"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ФСИН2 (без корпусов)</font></font></option>
     <option value="СОШ17"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">СОШ17 (без корпусов)</font></font></option>
+    <option value="__custom__"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">✏️ Другой (ввести вручную)</font></font></option>
   </select>
+  <input id="mobj-project-custom" placeholder="Название проекта" style="display:none;width:100%;
+    background:#0d1117;color:#e2e8f0;border:1px solid #3b82f6;border-radius:6px;padding:9px 10px;
+    font-size:13px;margin-bottom:10px;outline:none">
 
   <div id="mobj-korpus-wrap">
     <label style="font-size:10px;color:#64748b;display:block;margin-bottom:3px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">чи /мес</font></font></label>
-    <select id="mobj-korpus" style="width:100%;background:#0d1117;color:#e2e8f0;border:1px solid #334155;
-      border-radius:6px;padding:9px 10px;font-size:13px;margin-bottom:10px;outline:none"><option value="СП1"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">СП1</font></font></option><option value="СП2"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">СП2</font></font></option><option value="АБК"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">АБК</font></font></option><option value="КПП1"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">КПП1</font></font></option><option value="КПП2"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">2</font></font></option></select>
+    <select id="mobj-korpus" onchange="_mobjToggleKorpusCustom()" style="width:100%;background:#0d1117;color:#e2e8f0;border:1px solid #334155;
+      border-radius:6px;padding:9px 10px;font-size:13px;margin-bottom:6px;outline:none"><option value="СП1"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">СП1</font></font></option><option value="СП2"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">СП2</font></font></option><option value="АБК"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">АБК</font></font></option><option value="КПП1"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">КПП1</font></font></option><option value="КПП2"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">2</font></font></option><option value="__custom__"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">✏️ Другой (ввести вручную)</font></font></option></select>
+    <input id="mobj-korpus-custom" placeholder="Название корпуса/объекта" style="display:none;width:100%;
+      background:#0d1117;color:#e2e8f0;border:1px solid #3b82f6;border-radius:6px;padding:9px 10px;
+      font-size:13px;margin-bottom:10px;outline:none">
   </div>
 
   <label style="font-size:10px;color:#64748b;display:block;margin-bottom:3px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Название/адрес (для уведомлений, необязательно)</font></font></label>
@@ -1225,6 +1233,7 @@ select{background:#1e293b;color:#e2e8f0;border:1px solid #334155;
   <button class="btn b-blue" onclick="exportVedFile()" title="Скачать HTML для телефона"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📱</font></font></button>
   <button class="btn b-or" onclick="open1C()" title="1С: Склад и ЛФУ"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🏭 1С</font></font></button>
   <button class="btn" onclick="openStartModal()" title="Сменить объект / Система" style="background:#334155;color:#93c5fd"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🏗️безопасность</font></font></button>
+  <button class="btn" onclick="clearProjectAll()" title="Очистить всё: локально и в онлайн-данных этого объекта" style="background:#7f1d1d;color:#fca5a5"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🗑 Очистить всё</font></font></button>
   <button class="btn b-pur" onclick="openLayerModal()" title="Новый слой / защита ИД"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📑 Слой</font></font></button>
   <button class="btn b-pur" onclick="openLayerModal()" title="Новый слой / защита ИД"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📑 Слой</font></font></button>
   <button class="btn" onclick="openM('mcloud')" title="Сохранить в облаке (Google Диск/Яндекс.Диск)" style="background:#1a73e8;color:#fff"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">☁ Облако</font></font></button>
@@ -1319,7 +1328,7 @@ select{background:#1e293b;color:#e2e8f0;border:1px solid #334155;
     </div>
   </div>
 
-  <div id="cw"><canvas id="cv" width="1760" height="811"></canvas></div>
+  <div id="cw"><canvas id="cv" width="1760" height="781"></canvas></div>
 </div>
 
 <div id="st">
@@ -4946,6 +4955,24 @@ function _applySnapshot(d){
     img.src=d.plan.dataURL;
   }
   rSel();rList();updCnt();updMountBtns();updKabBtns();render();
+}
+
+// Полная очистка текущего объекта: холст, план, слои — и локально, и в
+// онлайн-данных (data_<slug>.json на GitHub), если объект уже публиковался.
+// Нужна, когда в онлайн-снимке залежались старые/тестовые данные — простая
+// перезагрузка страницы их не уберёт, т.к. они подтягиваются именно оттуда.
+function clearProjectAll(){
+  if(!confirm('Очистить ВСЁ по этому объекту?\n\nСотрутся все группы, стены и план — локально в этом браузере, а если объект уже публиковался — то и в его онлайн-данных на GitHub (их подтянет любой, кто откроет эту же ссылку).\n\nОтменить можно только через Ctrl+Z сразу после, пока не обновил страницу.')) return;
+  push();
+  S.groups=[]; S.schits=[]; S.walls=[]; S.layers=[]; S.curLayer=0;
+  addG('Гр.1с','ЩС1','пом.9','gof20','ros25',null,'ip55');
+  addG('Гр.2с','ЩС1','пом.10','gof20','ros25',null,'ip55');
+  addG('Гр.1о','ЩО1','Освещение','gof20','o15',null,'ip55');
+  S.cur=S.groups[0].id;
+  bgImg=null; _curPlanDataURL=null;
+  rSel();rList();updCnt();updMountBtns();updKabBtns();render();
+  save(); // сохраняет локально и сразу же перезаписывает онлайн-снимок пустым состоянием
+  tip('🗑 Всё очищено — локально и в онлайн-данных (если объект был опубликован)');
 }
 
 function save(){
@@ -8748,16 +8775,49 @@ function hideSplash(){
 // МОДАЛ «ОБЪЕКТ + СИСТЕМА» — по регламенту ИД (перед началом работы)
 // ══════════════════════════════════════════════════════════════
 function _mobjUpdateKorpus(){
-  const proj = document.getElementById('mobj-project').value;
-  const wrap = document.getElementById('mobj-korpus-wrap');
+  const projSel = document.getElementById('mobj-project');
+  const proj = projSel.value;
+  const customEl = document.getElementById('mobj-project-custom');
   const sel  = document.getElementById('mobj-korpus');
-  if(!proj){ sel.innerHTML='<option value="">— сначала выбери проект —</option>'; return; }
-  const korpusi = ID_PROJECTS[proj] || [];
-  if(korpusi.length===0){
-    sel.innerHTML = '<option value="">— (без корпусов) —</option>';
-  }else{
-    sel.innerHTML = korpusi.map(k=>`<option value="${k}">${k}</option>`).join('');
+  const korpusCustomEl = document.getElementById('mobj-korpus-custom');
+
+  // Ручной ввод названия проекта
+  customEl.style.display = proj==='__custom__' ? 'block' : 'none';
+  if(proj==='__custom__'){
+    customEl.focus();
+    sel.innerHTML = '<option value="">— (укажи корпус вручную ниже) —</option><option value="__custom__">✏️ Ввести вручную</option>';
+    sel.value='__custom__';
+    korpusCustomEl.style.display='block';
+    return;
   }
+
+  if(!proj){ sel.innerHTML='<option value="">— сначала выбери проект —</option>'; korpusCustomEl.style.display='none'; return; }
+  const korpusi = ID_PROJECTS[proj] || [];
+  let html = korpusi.length===0
+    ? '<option value="">— (без корпусов) —</option>'
+    : korpusi.map(k=>`<option value="${k}">${k}</option>`).join('');
+  html += '<option value="__custom__">✏️ Другой (ввести вручную)</option>';
+  sel.innerHTML = html;
+  korpusCustomEl.style.display='none';
+}
+
+function _mobjToggleKorpusCustom(){
+  const sel = document.getElementById('mobj-korpus');
+  const customEl = document.getElementById('mobj-korpus-custom');
+  customEl.style.display = sel.value==='__custom__' ? 'block' : 'none';
+  if(sel.value==='__custom__') customEl.focus();
+}
+
+// Итоговое значение проекта/корпуса — с учётом ручного ввода
+function _mobjProjectValue(){
+  const sel = document.getElementById('mobj-project').value;
+  if(sel==='__custom__') return document.getElementById('mobj-project-custom').value.trim().toUpperCase();
+  return sel;
+}
+function _mobjKorpusValue(){
+  const sel = document.getElementById('mobj-korpus').value;
+  if(sel==='__custom__') return document.getElementById('mobj-korpus-custom').value.trim();
+  return sel;
 }
 
 let _mobjSelectedKey = 'ros';
@@ -8808,9 +8868,31 @@ function openStartModal(){
   let last = {};
   try{ last = JSON.parse(localStorage.getItem('eom_last_object')||'{}'); }catch(e){}
   if(last.project){
-    document.getElementById('mobj-project').value = last.project;
-    _mobjUpdateKorpus();
-    if(last.korpus) document.getElementById('mobj-korpus').value = last.korpus;
+    const projSel = document.getElementById('mobj-project');
+    const isKnownProject = [...projSel.options].some(o=>o.value===last.project);
+    if(isKnownProject){
+      projSel.value = last.project;
+      _mobjUpdateKorpus();
+      if(last.korpus){
+        const korpusSel = document.getElementById('mobj-korpus');
+        const isKnownKorpus = [...korpusSel.options].some(o=>o.value===last.korpus);
+        if(isKnownKorpus){
+          korpusSel.value = last.korpus;
+        }else{
+          korpusSel.value = '__custom__';
+          document.getElementById('mobj-korpus-custom').value = last.korpus;
+          document.getElementById('mobj-korpus-custom').style.display='block';
+        }
+      }
+    }else{
+      // Проект был введён вручную в прошлый раз
+      projSel.value = '__custom__';
+      document.getElementById('mobj-project-custom').value = last.project;
+      _mobjUpdateKorpus();
+      if(last.korpus){
+        document.getElementById('mobj-korpus-custom').value = last.korpus;
+      }
+    }
   }
   if(last.name) document.getElementById('mobj-name').value = last.name;
   if(last.sysKey){ _mobjSelectedKey = last.sysKey; renderMobjSysBody(); }
@@ -8851,10 +8933,10 @@ function _getStableShareSlug(){
 const GH_SHARE_BASE = 'https://romantolstov5710-wq.github.io/-/';
 
 function startWorkFlow(){
-  const proj   = document.getElementById('mobj-project').value;
-  const korpus = document.getElementById('mobj-korpus').value;
+  const proj   = _mobjProjectValue();
+  const korpus = _mobjKorpusValue();
   const name   = document.getElementById('mobj-name').value.trim();
-  if(!proj){ tip('⚠️ Выбери проект'); return; }
+  if(!proj){ tip('⚠️ Выбери или впиши проект'); return; }
 
   // Записываем в поля шифра (вкладка «🔗 Ссылка»)
   const spEl = document.getElementById('share-project'); if(spEl) spEl.value = proj;
