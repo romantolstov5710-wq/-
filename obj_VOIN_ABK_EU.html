@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru"><head>
+<html lang="ru" class="translated-ltr"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -133,68 +133,67 @@ select{background:#1e293b;color:#e2e8f0;border:1px solid #334155;
 </style>
 <script src="https://unpkg.com/xlsx-js-style@1.2.0/dist/xlsx.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-</head>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.zZZZhVqDDCw.L.W.O/am=BCDAAQ/d=0/rs=AN8SPfp7vz7uxdurBWNZnKX0iW55RW6mZA/m=el_main_css"></head>
 <body>
 
 <!-- МОДАЛ: КАЛИБРОВКА МАСШТАБА -->
 <div class="mbg" id="mcalib"><div class="mbox" style="max-width:400px">
-  <h3>📏 Проверка и калибровка масштаба</h3>
-  <p style="font-size:11px;color:#9ca3af;margin-bottom:12px;line-height:1.6">
-    Если масштаб плана неизвестен — мастер замеряет рулеткой
-    расстояние от стены до стены и вводит его здесь.<br>
+  <h3><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📏 Проверка и калибровка масштаба</font></font></h3>
+  <p style="font-size:11px;color:#9ca3af;margin-bottom:12px;line-height:1.6"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+    Если масштабный план неизвестен — мастер замеряет рулеткой расстояние от стены до стены и ведет его сюда. </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
     Система пересчитает все нарисованные трассы автоматически.
-  </p>
+  </font></font></p>
 
   <div style="background:#0d1117;border-radius:8px;padding:12px;margin-bottom:12px">
-    <div style="font-size:11px;font-weight:700;color:#f59e0b;margin-bottom:8px">
+    <div style="font-size:11px;font-weight:700;color:#f59e0b;margin-bottom:8px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
       📐 Как откалибровать:
-    </div>
-    <div style="font-size:11px;color:#9ca3af;line-height:2">
-      1. Нажми «Указать два конца» → кликни на плане первую точку<br>
-      2. Кликни вторую точку того же расстояния<br>
-      3. Введи фактический размер рулеткой (мм)<br>
+    </font></font></div>
+    <div style="font-size:11px;color:#9ca3af;line-height:2"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+      1. Нажми «Указать две конца» → кликни на план первой точки </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+      2. Нажми вторую точку на том же расстоянии </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+      3. Введи фактический размер рулетки (мм) </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
       4. Нажми «Применить» — все трассы пересчитаются
-    </div>
+    </font></font></div>
   </div>
 
   <div id="calib-step1">
-    <button class="btn b-blue" style="width:100%;padding:10px;font-size:12px;margin-bottom:8px" onclick="startCalib()">
-      📍 Указать два конца известного расстояния
-    </button>
+    <button class="btn b-blue" style="width:100%;padding:10px;font-size:12px;margin-bottom:8px" onclick="startCalib()"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+      📍 Указать конец двух отдаленных расстояний
+    </font></font></button>
   </div>
 
   <div id="calib-step2" style="display:none">
     <div style="background:#1e3a5f;border-radius:6px;padding:10px;margin-bottom:10px;font-size:11px;color:#93c5fd">
-      <div id="calib-pts-info">Кликни первую точку на плане…</div>
+      <div id="calib-pts-info"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Нажмите первую точку на плане…</font></font></div>
     </div>
-    <label style="font-size:10px;color:#64748b;display:block;margin-bottom:4px">
+    <label style="font-size:10px;color:#64748b;display:block;margin-bottom:4px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
       Фактическое расстояние (рулетка), мм:
-    </label>
+    </font></font></label>
     <div style="display:flex;gap:8px;align-items:center;margin-bottom:10px">
       <input id="calib-real" type="number" min="100" max="99000" value="3000" step="50" style="flex:1;background:#0d1117;color:#e2e8f0;border:1px solid #334155;
         border-radius:5px;padding:8px 10px;font-size:18px;font-weight:700;outline:none">
-      <span style="color:#64748b;font-size:11px;white-space:nowrap">мм</span>
+      <span style="color:#64748b;font-size:11px;white-space:nowrap"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">мм</font></font></span>
     </div>
     <!-- Быстрые размеры -->
     <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px">
-      <span style="font-size:9px;color:#64748b;width:100%">Типовые размеры:</span>
-      <button class="btn b-gray" style="padding:4px 8px;font-size:10px" onclick="document.getElementById('calib-real').value=1200">1,2м</button>
-      <button class="btn b-gray" style="padding:4px 8px;font-size:10px" onclick="document.getElementById('calib-real').value=1500">1,5м</button>
-      <button class="btn b-gray" style="padding:4px 8px;font-size:10px" onclick="document.getElementById('calib-real').value=2000">2,0м</button>
-      <button class="btn b-gray" style="padding:4px 8px;font-size:10px" onclick="document.getElementById('calib-real').value=2500">2,5м</button>
-      <button class="btn b-gray" style="padding:4px 8px;font-size:10px" onclick="document.getElementById('calib-real').value=3000">3,0м</button>
-      <button class="btn b-gray" style="padding:4px 8px;font-size:10px" onclick="document.getElementById('calib-real').value=3300">3,3м</button>
-      <button class="btn b-gray" style="padding:4px 8px;font-size:10px" onclick="document.getElementById('calib-real').value=4000">4,0м</button>
-      <button class="btn b-gray" style="padding:4px 8px;font-size:10px" onclick="document.getElementById('calib-real').value=5000">5,0м</button>
+      <span style="font-size:9px;color:#64748b;width:100%"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Типовые размеры:</font></font></span>
+      <button class="btn b-gray" style="padding:4px 8px;font-size:10px" onclick="document.getElementById('calib-real').value=1200"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">1,2м</font></font></button>
+      <button class="btn b-gray" style="padding:4px 8px;font-size:10px" onclick="document.getElementById('calib-real').value=1500"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">1,5 м</font></font></button>
+      <button class="btn b-gray" style="padding:4px 8px;font-size:10px" onclick="document.getElementById('calib-real').value=2000"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">2,0м</font></font></button>
+      <button class="btn b-gray" style="padding:4px 8px;font-size:10px" onclick="document.getElementById('calib-real').value=2500"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">2,5 м</font></font></button>
+      <button class="btn b-gray" style="padding:4px 8px;font-size:10px" onclick="document.getElementById('calib-real').value=3000"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">3,0м</font></font></button>
+      <button class="btn b-gray" style="padding:4px 8px;font-size:10px" onclick="document.getElementById('calib-real').value=3300"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">3,3м</font></font></button>
+      <button class="btn b-gray" style="padding:4px 8px;font-size:10px" onclick="document.getElementById('calib-real').value=4000"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">4,0м</font></font></button>
+      <button class="btn b-gray" style="padding:4px 8px;font-size:10px" onclick="document.getElementById('calib-real').value=5000"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">5,0м</font></font></button>
     </div>
     <div id="calib-preview" style="display:none;padding:8px;background:#14532d;border-radius:6px;
       margin-bottom:10px;font-size:11px;color:#86efac">
     </div>
     <div style="display:flex;gap:8px">
-      <button class="btn b-grn" id="calib-apply-btn" style="flex:1;padding:9px;font-size:12px" onclick="applyCalib()" disabled="">
+      <button class="btn b-grn" id="calib-apply-btn" style="flex:1;padding:9px;font-size:12px" onclick="applyCalib()" disabled=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
         ✅ Применить масштаб
-      </button>
-      <button class="btn b-gray" style="padding:9px;font-size:11px" onclick="cancelCalib()">✕ Отмена</button>
+      </font></font></button>
+      <button class="btn b-gray" style="padding:9px;font-size:11px" onclick="cancelCalib()"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">✕ Отмена</font></font></button>
     </div>
   </div>
 
@@ -202,13 +201,13 @@ select{background:#1e293b;color:#e2e8f0;border:1px solid #334155;
     background:#14532d;border-radius:6px;font-size:11px;color:#86efac"></div>
 
   <div style="margin-top:10px;padding:8px;background:#1e293b;border-radius:6px;font-size:10px;color:#64748b">
-    <b style="color:#94a3b8">Текущий масштаб:</b>
-    <span id="calib-cur-scale">не откалиброван</span><br>
-    <b style="color:#94a3b8">Размер плана:</b>
-    <span id="calib-bld-size">—</span>
+    <b style="color:#94a3b8"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Текущий масштаб: </font></font></b>
+    <span id="calib-cur-scale"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">не откалиброван </font></font></span><br>
+    <b style="color:#94a3b8"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Размер плана: </font></font></b>
+    <span id="calib-bld-size"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">—</font></font></span>
   </div>
 
-  <button class="btn b-gray" style="width:100%;margin-top:10px;padding:7px;font-size:11px" onclick="closeM('mcalib')">✕ Закрыть</button>
+  <button class="btn b-gray" style="width:100%;margin-top:10px;padding:7px;font-size:11px" onclick="closeM('mcalib')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">✕ кер</font></font></button>
 </div></div>
 
 
@@ -216,40 +215,40 @@ select{background:#1e293b;color:#e2e8f0;border:1px solid #334155;
 
 <!-- МОДАЛ: ОБЛАЧНЫЙ ЭКСПОРТ -->
 <div class="mbg" id="mcloud"><div class="mbox" style="max-width:480px">
-  <h3>☁ Сохранить в облако</h3>
+  <h3><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">☁ Сохранить в облаке</font></font></h3>
 
   <!-- Название объекта -->
-  <label style="font-size:10px;color:#64748b;display:block;margin-bottom:3px">Название объекта / проекта</label>
+  <label style="font-size:10px;color:#64748b;display:block;margin-bottom:3px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Название объекта/проекта</font></font></label>
   <input id="cloud-name" type="text" placeholder="Офис ул.Ленина 12, 1 этаж" style="width:100%;background:#0d1117;color:#e2e8f0;border:1px solid #334155;
     border-radius:5px;padding:7px 10px;font-size:12px;outline:none;margin-bottom:10px">
 
   <!-- Что сохраняем -->
   <div style="background:#0d1117;border-radius:6px;padding:8px 10px;margin-bottom:10px">
-    <div style="font-size:10px;color:#64748b;margin-bottom:5px">Файлы для сохранения:</div>
+    <div style="font-size:10px;color:#64748b;margin-bottom:5px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Файлы для сохранения:</font></font></div>
     <label style="display:flex;align-items:center;gap:6px;font-size:11px;color:#e2e8f0;margin-bottom:3px;cursor:pointer">
-      <input type="checkbox" id="cl-json" checked=""> 📦 Проект JSON (для продолжения работы)
-    </label>
+      <input type="checkbox" id="cl-json" checked=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📦 Проект JSON (для продолжения работы)
+    </font></font></label>
     <label style="display:flex;align-items:center;gap:6px;font-size:11px;color:#e2e8f0;margin-bottom:3px;cursor:pointer">
-      <input type="checkbox" id="cl-ved" checked=""> 📋 Ведомость материалов HTML
-    </label>
+      <input type="checkbox" id="cl-ved" checked=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📋 Ведомость материалов HTML
+    </font></font></label>
     <label style="display:flex;align-items:center;gap:6px;font-size:11px;color:#e2e8f0;margin-bottom:3px;cursor:pointer">
-      <input type="checkbox" id="cl-png" checked=""> 🖼 Чертёж PNG
-    </label>
+      <input type="checkbox" id="cl-png" checked=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🖼Горячий цветок PNG
+    </font></font></label>
     <label style="display:flex;align-items:center;gap:6px;font-size:11px;color:#e2e8f0;cursor:pointer">
-      <input type="checkbox" id="cl-dxf" checked=""> 📐 Чертёж DXF 3D
-    </label>
+      <input type="checkbox" id="cl-dxf" checked=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📐 мир DXF 3D
+    </font></font></label>
   </div>
 
   <!-- Сервис -->
-  <div style="font-size:10px;color:#64748b;margin-bottom:5px">Куда сохранять:</div>
+  <div style="font-size:10px;color:#64748b;margin-bottom:5px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Куда оставаться:</font></font></div>
   <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
     <button class="btn" id="cl-gdrive" onclick="cloudExportGoogle()" style="flex:1;padding:10px;background:#1a73e8;color:#fff;min-width:130px">
-      <img src="https://www.google.com/favicon.ico" style="width:14px;vertical-align:middle;margin-right:4px">
-      Google Drive
-    </button>
-    <button class="btn" id="cl-yadisk" onclick="cloudExportYandex()" style="flex:1;padding:10px;background:#fc3f1d;color:#fff;min-width:130px">
+      <img src="https://www.google.com/favicon.ico" style="width:14px;vertical-align:middle;margin-right:4px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+      Google Диск
+    </font></font></button>
+    <button class="btn" id="cl-yadisk" onclick="cloudExportYandex()" style="flex:1;padding:10px;background:#fc3f1d;color:#fff;min-width:130px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
       ☁ Яндекс.Диск
-    </button>
+    </font></font></button>
   </div>
 
   <!-- Статус -->
@@ -259,79 +258,79 @@ select{background:#1e293b;color:#e2e8f0;border:1px solid #334155;
 
   <!-- Ссылка (после загрузки) -->
   <div id="cloud-link-wrap" style="display:none;margin-bottom:10px">
-    <div style="font-size:10px;color:#64748b;margin-bottom:3px">Ссылка для проектировщика:</div>
+    <div style="font-size:10px;color:#64748b;margin-bottom:3px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Ссылка для проектировщика:</font></font></div>
     <div style="display:flex;gap:6px">
       <input id="cloud-link" type="text" readonly="" style="flex:1;background:#0d1117;color:#4ade80;border:1px solid #166534;
         border-radius:5px;padding:6px 8px;font-size:11px;outline:none">
-      <button class="btn b-gray" onclick="copyCloudLink()" style="padding:6px 10px;font-size:11px">📋</button>
+      <button class="btn b-gray" onclick="copyCloudLink()" style="padding:6px 10px;font-size:11px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📋</font></font></button>
     </div>
   </div>
 
   <div style="display:flex;gap:8px">
-    <button class="btn" onclick="closeM('mcloud');openM('mshare')" style="flex:1;padding:8px;background:#0891b2;color:#fff">🔗 Создать ссылку</button>
-    <button class="btn b-gray" onclick="closeM('mcloud')" style="padding:8px">Закрыть</button>
+    <button class="btn" onclick="closeM('mcloud');openM('mshare')" style="flex:1;padding:8px;background:#0891b2;color:#fff"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🔗 Создать ссылку</font></font></button>
+    <button class="btn b-gray" onclick="closeM('mcloud')" style="padding:8px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">мер</font></font></button>
   </div>
-  <p style="font-size:9.5px;color:#475569;margin-top:8px;line-height:1.5">
-    Google Drive: нужен аккаунт Google, откроется окно авторизации.<br>
-    Яндекс.Диск: введи токен Яндекса или используй публичную папку.<br>
-    Файлы сохраняются в папку «ЭОМ_Мастер» в корне диска.
-  </p>
+  <p style="font-size:9.5px;color:#475569;margin-top:8px;line-height:1.5"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+    Google Диск: нужен аккаунт Google, откроется окно авторизации. </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+    Яндекс.Диск: введите токен Яндекса или используйте открытый адаптер. </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+    Файлы указаны в корне «ЭОМ_Мастер» в корне диска.
+  </font></font></p>
 </div></div>
 
 <!-- МОДАЛ: ССЫЛКА ДЛЯ ПРОЕКТИРОВЩИКА -->
 <div class="mbg" id="mshare"><div class="mbox" style="max-width:490px">
-  <h3>🔗 Поделиться</h3>
+  <h3><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🔗 Поделиться</font></font></h3>
 
   <!-- Вкладки -->
   <div style="display:flex;gap:0;margin-bottom:12px;border-bottom:2px solid #334155">
     <button id="stab1" onclick="shareTab(1)" style="flex:1;padding:8px;border:none;background:#1e3a5f;color:#93c5fd;
-      font-size:11px;font-weight:700;cursor:pointer;border-radius:6px 6px 0 0">
+      font-size:11px;font-weight:700;cursor:pointer;border-radius:6px 6px 0 0"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
       📋 Ведомость проекта
-    </button>
+    </font></font></button>
     <button id="stab2" onclick="shareTab(2)" style="flex:1;padding:8px;border:none;background:#1e293b;color:#64748b;
-      font-size:11px;cursor:pointer;border-radius:6px 6px 0 0">
+      font-size:11px;cursor:pointer;border-radius:6px 6px 0 0"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
       🛠 Шаблон ЭОМ Мастер
-    </button>
+    </font></font></button>
   </div>
 
   <!-- ВКЛАДКА 1: Ведомость -->
   <div id="stab-content1">
-    <label style="font-size:10px;color:#64748b;display:block;margin-bottom:3px">Название объекта</label>
+    <label style="font-size:10px;color:#64748b;display:block;margin-bottom:3px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Название объекта</font></font></label>
     <input id="share-name" type="text" placeholder="Офис ул.Ленина 12, этаж 1" style="width:100%;background:#0d1117;color:#e2e8f0;border:1px solid #334155;
       border-radius:5px;padding:7px 10px;font-size:12px;outline:none;margin-bottom:7px">
-    <label style="font-size:10px;color:#64748b;display:block;margin-bottom:3px">Мастер (имя)</label>
+    <label style="font-size:10px;color:#64748b;display:block;margin-bottom:3px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Мастер (имя)</font></font></label>
     <input id="share-author" type="text" placeholder="Иванов А.С." style="width:100%;background:#0d1117;color:#e2e8f0;border:1px solid #334155;
       border-radius:5px;padding:7px 10px;font-size:12px;outline:none;margin-bottom:7px">
 
     <!-- Шифр ИД -->
     <div style="display:flex;gap:5px;margin-bottom:7px;flex-wrap:wrap">
       <div style="flex:1;min-width:90px">
-        <label style="font-size:10px;color:#64748b;display:block;margin-bottom:2px">Проект</label>
+        <label style="font-size:10px;color:#64748b;display:block;margin-bottom:2px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">били</font></font></label>
         <input id="share-project" oninput="updateShifrPreview()" type="text" placeholder="ИСКРА" maxlength="10" style="width:100%;background:#0d1117;color:#e2e8f0;border:1px solid #334155;
           border-radius:5px;padding:6px 8px;font-size:12px;outline:none;text-transform:uppercase">
       </div>
       <div style="flex:1;min-width:70px">
-        <label style="font-size:10px;color:#64748b;display:block;margin-bottom:2px">Объект/корпус</label>
+        <label style="font-size:10px;color:#64748b;display:block;margin-bottom:2px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">спи/ка́рка́рсес</font></font></label>
         <input id="share-korpus" oninput="updateShifrPreview()" type="text" placeholder="СП1" maxlength="10" style="width:100%;background:#0d1117;color:#e2e8f0;border:1px solid #334155;
           border-radius:5px;padding:6px 8px;font-size:12px;outline:none;text-transform:uppercase">
       </div>
       <div style="flex:1;min-width:70px">
-        <label style="font-size:10px;color:#64748b;display:block;margin-bottom:2px">Марка (ЭО/ЭМ/ЭУ)</label>
+        <label style="font-size:10px;color:#64748b;display:block;margin-bottom:2px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Марка (ЭО/ЭМ/ЭУ)</font></font></label>
         <input id="share-marka" oninput="updateShifrPreview()" type="text" placeholder="ЭМ" maxlength="10" style="width:100%;background:#0d1117;color:#e2e8f0;border:1px solid #334155;
           border-radius:5px;padding:6px 8px;font-size:12px;outline:none;text-transform:uppercase">
       </div>
       <div style="flex:1;min-width:60px">
-        <label style="font-size:10px;color:#64748b;display:block;margin-bottom:2px">Этап</label>
+        <label style="font-size:10px;color:#64748b;display:block;margin-bottom:2px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Этотп</font></font></label>
         <select id="share-etap" onchange="updateShifrPreview()" style="width:100%;background:#0d1117;color:#e2e8f0;border:1px solid #334155;
           border-radius:5px;padding:6px 8px;font-size:12px;outline:none">
-          <option value="КЛ">КЛ</option>
-          <option value="ОСР">ОСР</option>
-          <option value="ОБ">ОБ</option>
-          <option value="ЗР">ЗР</option>
+          <option value="КЛ"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">КЛ</font></font></option>
+          <option value="ОСР"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ОСР</font></font></option>
+          <option value="ОБ"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ОБ</font></font></option>
+          <option value="ЗР"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ЗР</font></font></option>
         </select>
       </div>
       <div style="flex:0 0 50px">
-        <label style="font-size:10px;color:#64748b;display:block;margin-bottom:2px">№ АОСР</label>
+        <label style="font-size:10px;color:#64748b;display:block;margin-bottom:2px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">№ АОСР</font></font></label>
         <input id="share-aosr-n" oninput="updateShifrPreview()" type="number" placeholder="1" min="1" max="99" value="1" style="width:100%;background:#0d1117;color:#e2e8f0;border:1px solid #334155;
           border-radius:5px;padding:6px 8px;font-size:12px;outline:none">
       </div>
@@ -941,84 +940,82 @@ select{background:#1e293b;color:#e2e8f0;border:1px solid #334155;
 <div id="mobj" style="display: flex; position: fixed; inset: 0px; z-index: 9998; background: rgba(15, 23, 42, 0.97); align-items: center; justify-content: center; padding: 16px;">
 <div style="background:#1e293b;border:1px solid #334155;border-radius:14px;
   max-width:440px;width:100%;padding:20px;color:#e2e8f0;max-height:92vh;overflow:auto">
-  <div style="font-size:16px;font-weight:800;color:#60a5fa;margin-bottom:4px">🏗️ Объект и система</div>
-  <div style="font-size:11px;color:#64748b;margin-bottom:16px">
-    По регламенту ИД ООО «СК Армада+» — шифр и материалы ведомости настроятся автоматически
-  </div>
+  <div style="font-size:16px;font-weight:800;color:#60a5fa;margin-bottom:4px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🏗️ Объект и система</font></font></div>
+  <div style="font-size:11px;color:#64748b;margin-bottom:16px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+    По регламенту ИД ООО «СК Армада+» — шифры и материалы ведомости настроятся автоматически
+  </font></font></div>
 
-  <label style="font-size:10px;color:#64748b;display:block;margin-bottom:3px">Проект</label>
+  <label style="font-size:10px;color:#64748b;display:block;margin-bottom:3px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">били</font></font></label>
   <select id="mobj-project" onchange="_mobjUpdateKorpus()" style="width:100%;background:#0d1117;color:#e2e8f0;border:1px solid #334155;border-radius:6px;
     padding:9px 10px;font-size:13px;margin-bottom:6px;outline:none">
-    <option value="">— выбери проект —</option>
-    <option value="ИСКРА">ИСКРА</option>
-    <option value="ВОИН">ВОИН</option>
-    <option value="ФСИН2">ФСИН2 (без корпусов)</option>
-    <option value="СОШ17">СОШ17 (без корпусов)</option>
-    <option value="__custom__">✏️ Другой (ввести вручную)</option>
+    <option value=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">— выбор проекта —</font></font></option>
+    <option value="ИСКРА"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ИСКРА</font></font></option>
+    <option value="ВОИН"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ВОИН</font></font></option>
+    <option value="ФСИН2"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ФСИН2 (без корпусов)</font></font></option>
+    <option value="СОШ17"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">СОШ17 (без корпусов)</font></font></option>
+    <option value="__custom__"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">✏️ Другой (ввести вручную)</font></font></option>
   </select>
   <input id="mobj-project-custom" placeholder="Название проекта" style="display:none;width:100%;
     background:#0d1117;color:#e2e8f0;border:1px solid #3b82f6;border-radius:6px;padding:9px 10px;
     font-size:13px;margin-bottom:10px;outline:none">
 
   <div id="mobj-korpus-wrap">
-    <label style="font-size:10px;color:#64748b;display:block;margin-bottom:3px">Объект / корпус</label>
+    <label style="font-size:10px;color:#64748b;display:block;margin-bottom:3px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">чи /мес</font></font></label>
     <select id="mobj-korpus" onchange="_mobjToggleKorpusCustom()" style="width:100%;background:#0d1117;color:#e2e8f0;border:1px solid #334155;
-      border-radius:6px;padding:9px 10px;font-size:13px;margin-bottom:6px;outline:none"><option value="СП1">СП1</option><option value="СП2">СП2</option><option value="АБК">АБК</option><option value="КПП1">КПП1</option><option value="КПП2">КПП2</option><option value="__custom__">✏️ Другой (ввести вручную)</option></select>
+      border-radius:6px;padding:9px 10px;font-size:13px;margin-bottom:6px;outline:none"><option value="СП1"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">СП1</font></font></option><option value="СП2"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">СП2</font></font></option><option value="АБК"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">АБК</font></font></option><option value="КПП1"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">КПП1</font></font></option><option value="КПП2"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">2</font></font></option><option value="__custom__"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">✏️ Другой (ввести вручную)</font></font></option></select>
     <input id="mobj-korpus-custom" placeholder="Название корпуса/объекта" style="display:none;width:100%;
       background:#0d1117;color:#e2e8f0;border:1px solid #3b82f6;border-radius:6px;padding:9px 10px;
       font-size:13px;margin-bottom:10px;outline:none">
   </div>
 
-  <label style="font-size:10px;color:#64748b;display:block;margin-bottom:3px">Название / адрес (для ведомости, необязательно)</label>
+  <label style="font-size:10px;color:#64748b;display:block;margin-bottom:3px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Название/адрес (для уведомлений, необязательно)</font></font></label>
   <input id="mobj-name" placeholder="Спальный корпус, этаж 2" style="width:100%;background:#0d1117;color:#e2e8f0;
     border:1px solid #334155;border-radius:6px;padding:9px 10px;font-size:13px;margin-bottom:16px;outline:none">
 
-  <div style="font-size:11px;font-weight:700;color:#a78bfa;margin-bottom:8px">Марка ЭОМ (система)</div>
-  <div id="mobj-sys-body" style="max-height:260px;overflow:auto;margin-bottom:16px;padding-right:2px"><div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:6px">ВНУТРЕННИЕ СЕТИ</div><button type="button" class="btn" id="mobj-sys-btn-ros" onclick="_mobjPickSys('ros')" style="padding:9px;font-size:12px;background:#0d1117;color:#e2e8f0;border:1px solid #3b82f6;
-    text-align:left;width:100%;margin-bottom:5px;opacity:1">
-    <b style="color:#3b82f6">ЭУ</b> — Электроустановки — розетки, выключатели, лючки
-  </button><button type="button" class="btn" id="mobj-sys-btn-osv" onclick="_mobjPickSys('osv')" style="padding:9px;font-size:12px;background:#0d1117;color:#e2e8f0;border:1px solid #f59e0b;
+  <div style="font-size:11px;font-weight:700;color:#a78bfa;margin-bottom:8px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Марка ЭОМ (система)</font></font></div>
+  <div id="mobj-sys-body" style="max-height:260px;overflow:auto;margin-bottom:16px;padding-right:2px"><div style="font-size:10px;font-weight:700;color:#64748b;margin-bottom:6px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ВНУТРЕННИЕ СЕТИ</font></font></div><button type="button" class="btn" id="mobj-sys-btn-ros" onclick="_mobjPickSys('ros')" style="padding: 9px; font-size: 12px; background: rgb(13, 17, 23); color: rgb(226, 232, 240); border: 1px solid rgb(59, 130, 246); text-align: left; width: 100%; margin-bottom: 5px; opacity: 1;">
+    <b style="color:#3b82f6"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ЭУ</font></font></b><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> — Электроустановки — розетки, выключатели, лючки
+  </font></font></button><button type="button" class="btn" id="mobj-sys-btn-osv" onclick="_mobjPickSys('osv')" style="padding: 9px; font-size: 12px; background: rgb(13, 17, 23); color: rgb(226, 232, 240); border: 1px solid rgb(245, 158, 11); text-align: left; width: 100%; margin-bottom: 5px; opacity: 0.55;">
+    <b style="color:#f59e0b"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ЭО</font></font></b><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> — Электрическое освещение
+  </font></font></button><button type="button" class="btn" id="mobj-sys-btn-av" onclick="_mobjPickSys('av')" style="padding:9px;font-size:12px;background:#0d1117;color:#e2e8f0;border:1px solid #ef4444;
     text-align:left;width:100%;margin-bottom:5px;opacity:0.55">
-    <b style="color:#f59e0b">ЭО</b> — Электрическое освещение
-  </button><button type="button" class="btn" id="mobj-sys-btn-av" onclick="_mobjPickSys('av')" style="padding:9px;font-size:12px;background:#0d1117;color:#e2e8f0;border:1px solid #ef4444;
+    <b style="color:#ef4444"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ЭАО</font></font></b><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> — Электрическое аварийное освещение
+  </font></font></button><button type="button" class="btn" id="mobj-sys-btn-em" onclick="_mobjPickSys('em')" style="padding:9px;font-size:12px;background:#0d1117;color:#e2e8f0;border:1px solid #64748b;
     text-align:left;width:100%;margin-bottom:5px;opacity:0.55">
-    <b style="color:#ef4444">ЭАО</b> — Электрическое аварийное освещение
-  </button><button type="button" class="btn" id="mobj-sys-btn-em" onclick="_mobjPickSys('em')" style="padding:9px;font-size:12px;background:#0d1117;color:#e2e8f0;border:1px solid #64748b;
+    <b style="color:#64748b"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ЭМ</font></font></b><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> — Кабели и кабеленесущие конструкции внутри здания
+  </font></font></button><button type="button" class="btn" id="mobj-sys-btn-nku" onclick="_mobjPickSys('nku')" style="padding:9px;font-size:12px;background:#0d1117;color:#e2e8f0;border:1px solid #64748b;
     text-align:left;width:100%;margin-bottom:5px;opacity:0.55">
-    <b style="color:#64748b">ЭМ</b> — Кабели и кабеленесущие конструкции внутри здания
-  </button><button type="button" class="btn" id="mobj-sys-btn-nku" onclick="_mobjPickSys('nku')" style="padding:9px;font-size:12px;background:#0d1117;color:#e2e8f0;border:1px solid #64748b;
-    text-align:left;width:100%;margin-bottom:5px;opacity:0.55">
-    <b style="color:#64748b">НКУ</b> — Низковольтные комплектные устройства — щитовое оборудование<span style="font-size:9px;color:#f59e0b;margin-left:6px">общий шаблон КЛ</span>
+    <b style="color:#64748b"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">НКУ</font></font></b><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> — Низковольтные комплектные устройства — щитовое оборудование </font></font><span style="font-size:9px;color:#f59e0b;margin-left:6px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">общий шаблон КЛ</font></font></span>
   </button><button type="button" class="btn" id="mobj-sys-btn-eg" onclick="_mobjPickSys('eg')" style="padding:9px;font-size:12px;background:#0d1117;color:#e2e8f0;border:1px solid #64748b;
     text-align:left;width:100%;margin-bottom:5px;opacity:0.55">
-    <b style="color:#64748b">ЭГ</b> — Электрический контур заземления — ГЗШ, контур внутри здания<span style="font-size:9px;color:#f59e0b;margin-left:6px">общий шаблон КЛ</span>
-  </button><div style="font-size:10px;font-weight:700;color:#64748b;margin:10px 0 6px">НАРУЖНЫЕ СЕТИ</div><button type="button" class="btn" id="mobj-sys-btn-es" onclick="_mobjPickSys('es')" style="padding:9px;font-size:12px;background:#0d1117;color:#e2e8f0;border:1px solid #64748b;
+    <b style="color:#64748b"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ЭГ</font></font></b><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> — Электрический контакт заземления — ГЗШ, контур внутри здания </font></font><span style="font-size:9px;color:#f59e0b;margin-left:6px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">общий шаблон КЛ</font></font></span>
+  </button><div style="font-size:10px;font-weight:700;color:#64748b;margin:10px 0 6px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">НАРУЖНЫЕ СЕТИ</font></font></div><button type="button" class="btn" id="mobj-sys-btn-es" onclick="_mobjPickSys('es')" style="padding:9px;font-size:12px;background:#0d1117;color:#e2e8f0;border:1px solid #64748b;
     text-align:left;width:100%;margin-bottom:5px;opacity:0.55">
-    <b style="color:#64748b">ЭС</b> — Электроснабжение — траншеи, песчаная подушка, монтаж труб, КЛ и ВЛ, ГНБ<span style="font-size:9px;color:#f59e0b;margin-left:6px">общий шаблон КЛ</span>
+    <b style="color:#64748b"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ЭС</font></font></b><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> — Электроснабжение — траншеи, песчаная подушка, монтаж труб, КЛ и ВЛ, ГНБ </font></font><span style="font-size:9px;color:#f59e0b;margin-left:6px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">общий шаблон КЛ</font></font></span>
   </button><button type="button" class="btn" id="mobj-sys-btn-tprp" onclick="_mobjPickSys('tprp')" style="padding:9px;font-size:12px;background:#0d1117;color:#e2e8f0;border:1px solid #64748b;
     text-align:left;width:100%;margin-bottom:5px;opacity:0.55">
-    <b style="color:#64748b">ТП/РП</b> — Трансформаторные / распределительные подстанции<span style="font-size:9px;color:#f59e0b;margin-left:6px">общий шаблон КЛ</span>
+    <b style="color:#64748b"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ТП/РП</font></font></b><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> — Трансформаторные/распределительные подстанции </font></font><span style="font-size:9px;color:#f59e0b;margin-left:6px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">общий шаблон КЛ</font></font></span>
   </button><button type="button" class="btn" id="mobj-sys-btn-en" onclick="_mobjPickSys('en')" style="padding:9px;font-size:12px;background:#0d1117;color:#e2e8f0;border:1px solid #64748b;
     text-align:left;width:100%;margin-bottom:5px;opacity:0.55">
-    <b style="color:#64748b">ЭН</b> — Электрическое наружное освещение<span style="font-size:9px;color:#f59e0b;margin-left:6px">общий шаблон КЛ</span>
+    <b style="color:#64748b"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ЭН</font></font></b><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> — Электрическое наружное освещение </font></font><span style="font-size:9px;color:#f59e0b;margin-left:6px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">общий шаблон КЛ</font></font></span>
   </button><button type="button" class="btn" id="mobj-sys-btn-aho" onclick="_mobjPickSys('aho')" style="padding:9px;font-size:12px;background:#0d1117;color:#e2e8f0;border:1px solid #64748b;
     text-align:left;width:100%;margin-bottom:5px;opacity:0.55">
-    <b style="color:#64748b">АХО</b> — Архитектурно-художественное освещение<span style="font-size:9px;color:#f59e0b;margin-left:6px">общий шаблон КЛ</span>
+    <b style="color:#64748b"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">АХО</font></font></b><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> — Архитектурно-художественное освещение </font></font><span style="font-size:9px;color:#f59e0b;margin-left:6px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">общий шаблон КЛ</font></font></span>
   </button><button type="button" class="btn" id="mobj-sys-btn-eob" onclick="_mobjPickSys('eob')" style="padding:9px;font-size:12px;background:#0d1117;color:#e2e8f0;border:1px solid #64748b;
     text-align:left;width:100%;margin-bottom:5px;opacity:0.55">
-    <b style="color:#64748b">ЭОБ/СЭО</b> — Электрический обогрев / системы электрообогрева<span style="font-size:9px;color:#f59e0b;margin-left:6px">общий шаблон КЛ</span>
+    <b style="color:#64748b"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ЭОБ/СЭО</font></font></b><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> — Электрический обогрев / системы электрообогрева </font></font><span style="font-size:9px;color:#f59e0b;margin-left:6px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">общий шаблон КЛ</font></font></span>
   </button><button type="button" class="btn" id="mobj-sys-btn-mz" onclick="_mobjPickSys('mz')" style="padding:9px;font-size:12px;background:#0d1117;color:#e2e8f0;border:1px solid #64748b;
     text-align:left;width:100%;margin-bottom:5px;opacity:0.55">
-    <b style="color:#64748b">МЗ</b> — Молниезащита<span style="font-size:9px;color:#f59e0b;margin-left:6px">общий шаблон КЛ</span>
+    <b style="color:#64748b"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">МЗ</font></font></b><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> — Молниезащита </font></font><span style="font-size:9px;color:#f59e0b;margin-left:6px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">общий шаблон КЛ</font></font></span>
   </button><button type="button" class="btn" id="mobj-sys-btn-sge" onclick="_mobjPickSys('sge')" style="padding:9px;font-size:12px;background:#0d1117;color:#e2e8f0;border:1px solid #64748b;
     text-align:left;width:100%;margin-bottom:5px;opacity:0.55">
-    <b style="color:#64748b">СГЭ/ГЭ</b> — Система гарантированного электроснабжения<span style="font-size:9px;color:#f59e0b;margin-left:6px">общий шаблон КЛ</span>
+    <b style="color:#64748b"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">СГЭ/ГЭ</font></font></b><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> — Система гарантированного электроснабжения </font></font><span style="font-size:9px;color:#f59e0b;margin-left:6px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">общий шаблон КЛ</font></font></span>
   </button></div>
 
   <button class="btn" onclick="startWorkFlow()" style="width:100%;padding:13px;background:#3b82f6;
-    color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:800;cursor:pointer">
+    color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:800;cursor:pointer"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
     ▶ Начать работу
-  </button>
+  </font></font></button>
 
   <div id="mobj-link-box" style="display: block; margin-top: 12px; background: rgb(13, 17, 23); border: 1px solid rgb(21, 128, 61); border-radius: 8px; padding: 12px;">
     <div style="font-size:11px;font-weight:700;color:#4ade80;margin-bottom:6px">🔗 Ссылка на эту ИД</div>
@@ -1036,9 +1033,9 @@ select{background:#1e293b;color:#e2e8f0;border:1px solid #334155;
   </div>
 
   <button onclick="skipStartModal()" style="width:100%;padding:9px;margin-top:6px;background:none;
-    border:none;color:#64748b;font-size:11px;cursor:pointer">
+    border:none;color:#64748b;font-size:11px;cursor:pointer"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
     Пропустить — настрою позже (кнопка 📋 в шапке)
-  </button>
+  </font></font></button>
 </div>
 </div>
 
@@ -1115,69 +1112,69 @@ select{background:#1e293b;color:#e2e8f0;border:1px solid #334155;
 
 <!-- ШАПКА -->
 <div id="bar">
-  <h1>ЭОМ</h1>
+  <h1><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ЭОМ</font></font></h1>
   <button class="btn" id="sys-badge" onclick="openM('msys');renderSysModal()" style="padding: 4px 10px; font-size: 11px; font-weight: 700; background: rgb(30, 58, 95); color: rgb(59, 130, 246); border: 1px solid rgb(59, 130, 246); border-radius: 5px; white-space: nowrap;">🔌 Розетки</button>
   <div id="grp-row">
     <select id="gsel" onchange="swG(+this.value)" style="min-width:88px"><option value="5" selected="">Гр.1с</option><option value="6">Гр.2с</option><option value="7">Гр.1о</option></select>
     <span id="gdot" style="width: 10px; height: 10px; border-radius: 50%; background: rgb(59, 130, 246); flex-shrink: 0;"></span>
-    <button class="btn b-blue" onclick="openM('mg')" title="Новая группа">＋</button>
+    <button class="btn b-blue" onclick="openM('mg')" title="ставка пере"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">+</font></font></button>
   </div>
 
-  <button id="t-cable" class="btn b-blue on" onclick="sT('cable')">⟿ Кабель</button>
-  <button id="t-opusk" class="btn b-pur" onclick="sT('opusk')">↓ Опуск</button>
-  <button id="t-box" class="btn b-yel" onclick="sT('box')">⊡ Коробка</button>
-  <button id="t-rozet" class="btn b-grn" onclick="sT('rozet')">⊙ Розетка</button>
-  <button id="t-lamp" class="btn b-yel" onclick="sT('lamp')" style="color:#fde68a">○ Свет.</button>
-  <button id="t-schit" class="btn b-blue" onclick="openM('ms');sT('schit')">⊠ Щит</button>
-  <button id="t-wall" class="btn b-teal" onclick="openM('mw');sT('wall')">🧱 Стена</button>
-  <button id="t-er" class="btn b-red" onclick="sT('er')">✕ Ластик</button>
+  <button id="t-cable" class="btn b-blue on" onclick="sT('cable')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">⟿ пусто</font></font></button>
+  <button id="t-opusk" class="btn b-pur" onclick="sT('opusk')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">↓ Опуск</font></font></button>
+  <button id="t-box" class="btn b-yel" onclick="sT('box')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">⊡ Коробка</font></font></button>
+  <button id="t-rozet" class="btn b-grn" onclick="sT('rozet')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">⊙ Розетка</font></font></button>
+  <button id="t-lamp" class="btn b-yel" onclick="sT('lamp')" style="color:#fde68a"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">○ Свет.</font></font></button>
+  <button id="t-schit" class="btn b-blue" onclick="openM('ms');sT('schit')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">⊠ Щит</font></font></button>
+  <button id="t-wall" class="btn b-teal" onclick="openM('mw');sT('wall')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🧱 Стена</font></font></button>
+  <button id="t-er" class="btn b-red" onclick="sT('er')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">✕ Ластик</font></font></button>
 
   <label style="font-size:10px;color:#64748b;display:flex;align-items:center;gap:3px">
-    <input type="checkbox" id="cb-o" checked=""> Выровн.</label>
+    <input type="checkbox" id="cb-o" checked=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Выровн.</font></font></label>
   <label style="font-size:10px;color:#64748b;display:flex;align-items:center;gap:3px">
-    <input type="checkbox" id="cb-g" checked=""> Сетка</label>
+    <input type="checkbox" id="cb-g" checked=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Сетка</font></font></label>
   <label style="font-size:10px;display:flex;align-items:center;gap:3px">
-    <span style="color:#64748b">Фон:</span>
+    <span style="color:#64748b"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">чик:</font></font></span>
     <input type="range" id="sop" min="5" max="100" value="50" style="width:55px;accent-color:#ef4444">
   </label>
   <label style="font-size:10px;display:flex;align-items:center;gap:3px">
-    <span style="color:#64748b">Масштаб:</span>
+    <span style="color:#64748b"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Масштаб:</font></font></span>
     <input type="range" id="szm" min="30" max="500" value="100" style="width:60px;accent-color:#3b82f6">
-    <span id="vzm" style="color:#93c5fd;font-size:9px;min-width:30px">1%</span>
+    <span id="vzm" style="color:#93c5fd;font-size:9px;min-width:30px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">5%</font></font></span>
   </label>
 
   <!-- Строка 1: КАБЕЛЬ -->
   <div class="mount-row" title="Марка кабеля текущей группы">
-    <span class="mnt-label">Кабель:</span>
-    <button class="mnt-btn on" id="mkb-ros25" style="color:#3b82f6" onclick="setKab('ros25')">3×2,5 Роз.</button>
-    <button class="mnt-btn" id="mkb-o15" style="color:#f59e0b" onclick="setKab('o15')">3×1,5 Осв.</button>
-    <button class="mnt-btn" id="mkb-a15fr" style="color:#ef4444" onclick="setKab('a15fr')">FR 4×1,5 Ав.</button>
-    <button class="mnt-btn" id="mkb-a15" style="color:#f87171" onclick="setKab('a15')">FR 3×1,5</button>
-    <button class="mnt-btn" id="mkb-r25" style="color:#60a5fa" onclick="setKab('r25')">3×2,5</button>
-    <button class="mnt-btn" id="mkb-s4" style="color:#a3e635" onclick="setKab('s4')">5×4 Сил.</button>
+    <span class="mnt-label"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">доступно:</font></font></span>
+    <button class="mnt-btn on" id="mkb-ros25" style="color:#3b82f6" onclick="setKab('ros25')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">3×2,5 Роз.</font></font></button>
+    <button class="mnt-btn" id="mkb-o15" style="color:#f59e0b" onclick="setKab('o15')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">3×1,5 Осв.</font></font></button>
+    <button class="mnt-btn" id="mkb-a15fr" style="color:#ef4444" onclick="setKab('a15fr')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">FR 4×1,5 Ав.</font></font></button>
+    <button class="mnt-btn" id="mkb-a15" style="color:#f87171" onclick="setKab('a15')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">FR 3×1,5</font></font></button>
+    <button class="mnt-btn" id="mkb-r25" style="color:#60a5fa" onclick="setKab('r25')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">3×2,5</font></font></button>
+    <button class="mnt-btn" id="mkb-s4" style="color:#a3e635" onclick="setKab('s4')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">5×4 Сил.</font></font></button>
   </div>
   <!-- Строка 2: МОНТАЖ -->
-  <div class="mount-row" title="Способ прокладки текущей группы">
-    <span class="mnt-label">Монтаж:</span>
+  <div class="mount-row" title="Способность прокладки текущей группы">
+    <span class="mnt-label"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">кто:</font></font></span>
     <span id="cur-mount-badge" title="Текущий способ прокладки — переключай прямо во время рисования" style="display: inline-block; padding: 1px 8px; border-radius: 9px; font-size: 10px; font-weight: 700; background: rgb(23, 37, 84); color: rgb(147, 197, 253); border: 1px solid rgb(147, 197, 253); margin-right: 3px; vertical-align: middle; cursor: help;">гф.д20</span>
-    <button class="mnt-btn on" id="mnt-gof20" style="color:#3b82f6" onclick="setMount('gof20')">🔄 Гофра d20</button>
-    <button class="mnt-btn" id="mnt-gof16" style="color:#8b5cf6" onclick="setMount('gof16')">Гофра d16</button>
-    <button class="mnt-btn" id="mnt-gof25" style="color:#06b6d4" onclick="setMount('gof25')">Гофра d25</button>
-    <button class="mnt-btn" id="mnt-gof32" style="color:#0ea5e9" onclick="setMount('gof32')">Гофра d32</button>
-    <button class="mnt-btn" id="mnt-sthr20" style="color:#f59e0b" onclick="setMount('sthr20')">▌ Штроба d20</button>
-    <button class="mnt-btn" id="mnt-sthr16" style="color:#f97316" onclick="setMount('sthr16')">Штроба d16</button>
-    <button class="mnt-btn" id="mnt-lotok" style="color:#10b981" onclick="setMount('lotok')">═ Лоток 100</button>
-    <button class="mnt-btn" id="mnt-lotok200" style="color:#10b981" onclick="setMount('lotok200')">Лоток 200</button>
-    <button class="mnt-btn" id="mnt-open" style="color:#9ca3af" onclick="setMount('open')">— Открыто</button>
+    <button class="mnt-btn on" id="mnt-gof20" style="color:#3b82f6" onclick="setMount('gof20')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🔄 Гофра d20</font></font></button>
+    <button class="mnt-btn" id="mnt-gof16" style="color:#8b5cf6" onclick="setMount('gof16')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Гофра д16</font></font></button>
+    <button class="mnt-btn" id="mnt-gof25" style="color:#06b6d4" onclick="setMount('gof25')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Гофра д25</font></font></button>
+    <button class="mnt-btn" id="mnt-gof32" style="color:#0ea5e9" onclick="setMount('gof32')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Гофра д32</font></font></button>
+    <button class="mnt-btn" id="mnt-sthr20" style="color:#f59e0b" onclick="setMount('sthr20')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">▌ Штроба d20</font></font></button>
+    <button class="mnt-btn" id="mnt-sthr16" style="color:#f97316" onclick="setMount('sthr16')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Штроба d16</font></font></button>
+    <button class="mnt-btn" id="mnt-lotok" style="color:#10b981" onclick="setMount('lotok')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">═ Лоток 100</font></font></button>
+    <button class="mnt-btn" id="mnt-lotok200" style="color:#10b981" onclick="setMount('lotok200')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Лоток 200</font></font></button>
+    <button class="mnt-btn" id="mnt-open" style="color:#9ca3af" onclick="setMount('open')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">— Открыто</font></font></button>
   </div>
 
-  <button class="btn b-gray" onclick="undo()" title="Ctrl+Z">↩</button>
-  <button class="btn b-or" onclick="openM('mh')">📐</button>
-  <button class="btn b-or" onclick="openM('mplan')" title="Загрузить план / фон">🗺 План</button>
-  <button class="btn b-teal" onclick="autoDetectWalls()" title="Автораспознать стены по загруженному плану">🏗 Стены</button>
-  <button class="btn b-teal" onclick="openCalib()" title="Проверить масштаб">📏 Масштаб</button>
-  <button class="btn b-blue" onclick="save()">💾</button>
-  <button id="kd-btn" class="btn b-or" onclick="startKDDist()" title="Нажми → кликни кабель → кликни стену → введи размер">📏 КЛ</button>
+  <button class="btn b-gray" onclick="undo()" title="Ctrl+Z"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">↩</font></font></button>
+  <button class="btn b-or" onclick="openM('mh')"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📐</font></font></button>
+  <button class="btn b-or" onclick="openM('mplan')" title="Загрузить план / фон"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🗺 План</font></font></button>
+  <button class="btn b-teal" onclick="autoDetectWalls()" title="Автораспознавание стены по загруженному плану"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🏗 Стены</font></font></button>
+  <button class="btn b-teal" onclick="openCalib()" title="Посмотреть масштаб"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📏 Масштаб</font></font></button>
+  <button class="btn b-blue" onclick="save()"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">💾</font></font></button>
+  <button id="kd-btn" class="btn b-or" onclick="startKDDist()" title="Нажми → кликни трос → кликни стена → введи размер"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📏 КЛ</font></font></button>
   <span id="kd-panel" style="display:none;align-items:center;gap:5px">
     <span id="kd-hint" style="font-size:11px;color:#f59e0b;white-space:nowrap">кликни кабель…</span>
     <input id="kd-dist" type="text" placeholder="мм" inputmode="numeric" style="width:72px;background:#0d1117;color:#e2e8f0;border:1px solid #f59e0b;
@@ -1230,89 +1227,89 @@ select{background:#1e293b;color:#e2e8f0;border:1px solid #334155;
   </div>
   <span style="display:none"><!-- kd close -->
   </span>
-  <button class="btn b-grn" onclick="expV()" title="Ведомость в браузере">📋</button>
-  <button class="btn b-blue" onclick="exportVedFile()" title="Скачать HTML для телефона">📱</button>
-  <button class="btn b-or" onclick="open1C()" title="1С: Склад и ЛФУ">🏭 1С</button>
-  <button class="btn" onclick="openStartModal()" title="Сменить объект / систему" style="background:#334155;color:#93c5fd">🏗️ Объект</button>
-  <button class="btn" onclick="clearProjectAll()" title="Очистить всё: локально и в онлайн-данных этого объекта" style="background:#7f1d1d;color:#fca5a5">🗑 Очистить всё</button>
-  <button class="btn b-pur" onclick="openLayerModal()" title="Новый слой / защита ИД">📑 Слой</button>
-  <button class="btn b-pur" onclick="openLayerModal()" title="Новый слой / защита ИД">📑 Слой</button>
-  <button class="btn" onclick="openM('mcloud')" title="Сохранить в облако (Google Drive / Яндекс.Диск)" style="background:#1a73e8;color:#fff">☁ Облако</button>
-  <button class="btn" onclick="openM('mshare')" title="Создать ссылку для проектировщика" style="background:#0891b2;color:#fff">🔗 Ссылка</button>
-  <button class="btn" onclick="openM('maosr');aosrUpdateKeyStatus();aosrLoadRequisites();aosrUpdateSysLabel();if(!document.getElementById('aosr-materials').children.length)aosrAddMaterialRow();" title="АОСР с помощью ИИ (Claude)" style="background:#6d28d9;color:#fff">🤖 АОСР</button>
-  <button class="btn b-grn" style="font-weight:900;font-size:12px" onclick="showReady()">✅ ГОТОВО</button>
+  <button class="btn b-grn" onclick="expV()" title="Ведомость в браузере"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📋</font></font></button>
+  <button class="btn b-blue" onclick="exportVedFile()" title="Скачать HTML для телефона"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📱</font></font></button>
+  <button class="btn b-or" onclick="open1C()" title="1С: Склад и ЛФУ"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🏭 1С</font></font></button>
+  <button class="btn" onclick="openStartModal()" title="Сменить объект / Система" style="background:#334155;color:#93c5fd"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🏗️безопасность</font></font></button>
+  <button class="btn" onclick="clearProjectAll()" title="Очистить всё: локально и в онлайн-данных этого объекта" style="background:#7f1d1d;color:#fca5a5"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🗑 Очистить всё</font></font></button>
+  <button class="btn b-pur" onclick="openLayerModal()" title="Новый слой / защита ИД"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📑 Слой</font></font></button>
+  <button class="btn b-pur" onclick="openLayerModal()" title="Новый слой / защита ИД"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📑 Слой</font></font></button>
+  <button class="btn" onclick="openM('mcloud')" title="Сохранить в облаке (Google Диск/Яндекс.Диск)" style="background:#1a73e8;color:#fff"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">☁ Облако</font></font></button>
+  <button class="btn" onclick="openM('mshare')" title="Создать ссылку для проектировщика" style="background:#0891b2;color:#fff"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🔗 Ссылка</font></font></button>
+  <button class="btn" onclick="openM('maosr');aosrUpdateKeyStatus();aosrLoadRequisites();aosrUpdateSysLabel();if(!document.getElementById('aosr-materials').children.length)aosrAddMaterialRow();" title="АОСР с помощью ИИ (Клод)" style="background:#6d28d9;color:#fff"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🤖 АОСР</font></font></button>
+  <button class="btn b-grn" style="font-weight:900;font-size:12px" onclick="showReady()"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">✅ ГОТОВО</font></font></button>
 </div>
 
 <!-- ОСНОВНАЯ ЗОНА -->
 <div id="main">
   <div id="left">
     <div style="font-size:9px;color:#60a5fa;text-transform:uppercase;letter-spacing:.8px;
-      padding-bottom:3px;border-bottom:1px solid #334155;margin-bottom:4px">📦 Материалы</div>
+      padding-bottom:3px;border-bottom:1px solid #334155;margin-bottom:4px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📦 Материалы</font></font></div>
 
-    <div class="sec-t">🎨 Цвета кабелей</div>
+    <div class="sec-t"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🎨 Цвета карандаша</font></font></div>
     <div style="font-size:9px;line-height:1.8;padding:2px 4px">
-      <span style="color:#3b82f6">■</span> ВВГ-Пнг 3×2,5 розетки<br>
-      <span style="color:#f59e0b">■</span> ВВГ-Пнг 3×1,5 освещение<br>
-      <span style="color:#ef4444">■</span> ВВГнг-FR 4×1,5 аварийное<br>
-      <span style="color:#a3e635">■</span> ВВГнг 5×4 силовой<br>
-      <span style="color:#f59e0b">⊡</span> Коробка IP55 &nbsp;
-      <span style="color:#ef4444">⊡</span> Коробка FR
-    </div>
-    <div class="sec-t">🔌 Розетки</div>
+      <span style="color:#3b82f6"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">■</font></font></span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> Розетка ВВГ-Пнг 3×2,5 </font></font><br>
+      <span style="color:#f59e0b"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">■</font></font></span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> ВВГ-Пнг 3×1,5 Освещение </font></font><br>
+      <span style="color:#ef4444"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">■</font></font></span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> ВВГнг-FR 4×1,5 аварийное </font></font><br>
+      <span style="color:#a3e635"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">■</font></font></span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> ВВГнг 5×4 силовой </font></font><br>
+      <span style="color:#f59e0b"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">⊡</font></font></span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> Коробка IP55 &nbsp;
+       </font></font><span style="color:#ef4444"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">⊡</font></font></span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> Коробка FR
+    </font></font></div>
+    <div class="sec-t"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🔌 Розетки</font></font></div>
     <div class="mi on" data-t="cable" onclick="selM(this)">
       <div class="md" style="background:#3b82f6"></div>
-      <div><div class="mn">ВВГнг LSLTx 3×2,5</div><div class="ms">⟿ гофра потолок</div></div>
+      <div><div class="mn"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ВВГнг LSLTx 3×2,5</font></font></div><div class="ms"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">⟿ гофра корни</font></font></div></div>
     </div>
     <div class="mi" data-t="box" onclick="selM(this)">
       <div class="md" style="background:#f59e0b"></div>
-      <div><div class="mn">Коробка HEGEL КР26</div><div class="ms">⊡ IP55</div></div>
+      <div><div class="mn"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Коробка HEGEL КР26</font></font></div><div class="ms"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">⊡ IP55</font></font></div></div>
     </div>
     <div class="mi" data-t="rozet" onclick="selM(this)">
       <div class="md" style="background:#10b981"></div>
-      <div><div class="mn">Розетка 1-мест.</div><div class="ms">⊙ опуск штроба</div></div>
+      <div><div class="mn"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Розетка 1-мест.</font></font></div><div class="ms"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">⊙ опуск штроба</font></font></div></div>
     </div>
 
-    <div class="sec-t">💡 Освещение</div>
+    <div class="sec-t"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">💡 Экспонирование</font></font></div>
     <div class="mi" data-t="cable" onclick="selM(this)">
       <div class="md" style="background:#8b5cf6"></div>
-      <div><div class="mn">ВВГнг LSLTx 3×1,5</div><div class="ms">⟿ гофра потолок</div></div>
+      <div><div class="mn"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ВВГнг LSLTx 3×1,5</font></font></div><div class="ms"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">⟿ гофра корни</font></font></div></div>
     </div>
     <div class="mi" data-t="lamp" onclick="selM(this)">
       <div class="md" style="background:#fbbf24"></div>
-      <div><div class="mn">Светильник встр.</div><div class="ms">○ фальш-потолок</div></div>
+      <div><div class="mn"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Светильник встр.</font></font></div><div class="ms"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">○ фальш-потолок</font></font></div></div>
     </div>
 
-    <div class="sec-t">🧱 Конструкции</div>
+    <div class="sec-t"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">🧱 Конструкции</font></font></div>
     <div class="mi" data-t="wall" onclick="selM(this);openM('mw')">
       <div class="md" style="background:#14b8a6"></div>
-      <div><div class="mn">Кап. стена</div><div class="ms">→ гильза L550</div></div>
+      <div><div class="mn"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">ср. чек</font></font></div><div class="ms"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">→ гильза L550</font></font></div></div>
     </div>
     <div class="mi" data-t="wall" onclick="selM(this);document.getElementById('mw-t').value='perg';openM('mw')">
       <div class="md" style="background:#5eead4"></div>
-      <div><div class="mn">Перегородка</div><div class="ms">→ гильза L300</div></div>
+      <div><div class="mn"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Перегородка</font></font></div><div class="ms"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">→ гильза L300</font></font></div></div>
     </div>
 
     <!-- Счётчики -->
     <div id="cnt">
-      <div style="font-size:8.5px;color:#60a5fa;text-transform:uppercase;margin-bottom:3px">📊 Итого</div>
-      Кабель: <b id="ck">0.0м</b><br>
-      ×1.06: <b id="ckz">0.0м</b><br>
-      Коробок: <b id="cb2">0</b><br>
-      Розеток: <b id="cr">0</b><br>
-      <span style="color:#10b981">Подрозетники:</span> <b id="cpr">0</b><br>
-      Светильн.: <b id="cl">0</b><br>
-      Гильзы: <b id="cg" class="warn">0</b><br>
-      <span style="color:#0891b2">Гофра потолок:</span> <b id="cgof">0.0м</b><br>
-      <span style="color:#c084fc">Гофра штроба:</span> <b id="csthr">0.0м</b><br>
-      <span style="color:#818cf8">Лоток:</span> <b id="clot">0.0м</b><br>
-      <span style="color:#8b5cf6">Клипсы:</span> <b id="ckl">0</b><br>
-      Несвязан: <b id="ce" class="warn">0</b><br>
-      <span style="color:#a78bfa">Опусков:</span> <b id="co">0</b><br>
-      <span style="color:#facc15">Бирки:</span> <b id="cbk">0</b>
+      <div style="font-size:8.5px;color:#60a5fa;text-transform:uppercase;margin-bottom:3px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📊 Итой</font></font></div><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">
+      Кабель: </font></font><b id="ck">0.0м</b><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> 
+      ×1.06: </font></font><b id="ckz">0.0м</b><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> 
+      Коробок: </font></font><b id="cb2">0</b><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> 
+      Розеток: </font></font><b id="cr">0</b><br>
+      <span style="color:#10b981"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Подрозетники: </font></font></span> <b id="cpr">0</b><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> 
+      Светильн.: </font></font><b id="cl">0</b><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> 
+      Гильзы: </font></font><b id="cg" class="warn">0</b><br>
+      <span style="color:#0891b2"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Гофра потолка: </font></font></span> <b id="cgof">0.0м</b><br>
+      <span style="color:#c084fc"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Гофра штроба: </font></font></span> <b id="csthr">0.0м</b><br>
+      <span style="color:#818cf8"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Лоток: </font></font></span> <b id="clot">0.0м</b><br>
+      <span style="color:#8b5cf6"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Клипсы: </font></font></span> <b id="ckl">0</b><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> 
+      Несвязан: </font></font><b id="ce" class="warn">0</b><br>
+      <span style="color:#a78bfa"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Опусков: </font></font></span> <b id="co">0</b><br>
+      <span style="color:#facc15"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Бирки: </font></font></span> <b id="cbk">0</b>
     </div>
 
     <div style="margin-top:5px">
-      <div style="font-size:9px;color:#60a5fa;text-transform:uppercase;margin-bottom:3px">📋 Группы</div>
+      <div style="font-size:9px;color:#60a5fa;text-transform:uppercase;margin-bottom:3px"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">📋быстрый</font></font></div>
       <div id="glist"><div class="gi on" style="border-color:#3b82f6" onclick="swG(5)">
       <div class="md" style="background:#3b82f6"></div>
       <div><div class="mn">Гр.1с</div>
@@ -1329,14 +1326,14 @@ select{background:#1e293b;color:#e2e8f0;border:1px solid #334155;
     </div>
   </div>
 
-  <div id="cw"><canvas id="cv" width="390" height="600"></canvas></div>
+  <div id="cw"><canvas id="cv" width="1760" height="781"></canvas></div>
 </div>
 
 <div id="st">
-  <span>Режим: <b id="stm">Кабель</b></span>
-  <span>Группа: <b id="stg">Гр.1с</b></span>
-  <span>X:<b id="stx">0</b> Y:<b id="sty">0</b>мм</span>
-  <span>Отрезок: <b id="sts">0</b>м</span>
+  <span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Режим: </font></font><b id="stm"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">достаточный</font></font></b></span>
+  <span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Группа: </font></font><b id="stg">Гр.1с</b></span>
+  <span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">X: </font></font><b id="stx"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">0</font></font></b><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> Y: </font></font><b id="sty"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">0</font></font></b><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> мм</font></font></span>
+  <span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Отрезок: </font></font><b id="sts"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">0</font></font></b><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> м</font></font></span>
 </div>
 
 <!-- ПЛАНШЕТНАЯ ПАНЕЛЬ -->
@@ -9130,7 +9127,7 @@ if(isIOS&&!window.navigator.standalone&&!localStorage.getItem('ios_tip'))
 let _dip=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();_dip=e;
   tip('📲 Можно установить как приложение (+ в адресной строке)');});
-</script>
+</script><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class="VIpgJd-yAWNEb-hvhgNd-Ud7fr"><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""><div class=" VIpgJd-yAWNEb-hvhgNd-IuizWc-i3jM8c " dir="ltr">Исходный текст</div></div><div class="VIpgJd-yAWNEb-hvhgNd-k77Iif"><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Оцените этот перевод</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Ваш отзыв поможет нам улучшить Google Переводчик</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Хороший перевод" aria-label="Хороший перевод" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Плохой перевод" aria-label="Плохой перевод" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te_lib" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div>
 
 
 
